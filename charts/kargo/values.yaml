@@ -178,6 +178,7 @@ api:
     additionalScopes:
       - groups
       - aliuid
+      - uid
 
     ## @param api.oidc.usernameClaim The claim to use as the username for the user.
     usernameClaim: email
