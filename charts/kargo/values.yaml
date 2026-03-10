@@ -252,7 +252,23 @@ api:
       skipApprovalScreen: true
 
       ## @param api.oidc.dex.connectors Configure [Dex connectors](https://dexidp.io/docs/connectors/) to one or more upstream identity providers.
-      connectors: []
+      connectors: 
+      - type: oidc
+        id: aliyun
+        name: 阿里云 RAM
+        config:
+          # 阿里云 RAM OIDC issuer 地址
+          issuer: https://oauth.aliyun.com
+          clientID: 4044563568269828375
+          clientSecret: $ALIYUN_CLIENT_SECRET
+          redirectURI: https://43.99.27.16/dex/callback
+          # 阿里云 RAM 支持的 scopes
+          scopes:
+            - openid
+            - aliuid
+            - profile
+          # 用 sub 或 email 作为用户名标识
+          getUserInfo: true
       # - id: mock
       #   name: Example
       #   type: mockCallback
@@ -292,7 +308,12 @@ api:
         # another: value
 
       ## @param api.oidc.dex.env Environment variables to add to Dex server pods. This is convenient for cases where api.oidc.dex.connectors needs to reference environment variables from a Secret that is managed "out of band" with a secret management solution such as Sealed Secrets.
-      env: []
+      env:
+      - name: ALIYUN_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: aliyun-oidc-secret
+            key: clientSecret
       # - name: CLIENT_SECRET
       #   valueFrom:
       #     secretKeyRef:
