@@ -259,7 +259,7 @@ api:
         config:
           # 阿里云 RAM OIDC issuer 地址
           issuer: https://oauth.aliyun.com
-          clientID: 4044563568269828375
+          clientID: "4044563568269828375"
           clientSecret: $ALIYUN_CLIENT_SECRET
           redirectURI: https://43.99.27.16/dex/callback
           # 阿里云 RAM 支持的 scopes
