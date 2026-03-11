@@ -183,7 +183,9 @@ api:
 
     admins:
       ## @param api.oidc.admins.claims Subjects having any of these claims will automatically be Kargo admins.
-      claims: {}
+      claims:
+        iss:
+          - "https://oauth.aliyun.com" 
         # sub:
         # - alice
         # - bob
