@@ -271,6 +271,7 @@ api:
             - profile
           # 用 sub 或 email 作为用户名标识
           getUserInfo: true
+          insecureEnableGroups: true
           claimMapping:
             groups: uid
           
