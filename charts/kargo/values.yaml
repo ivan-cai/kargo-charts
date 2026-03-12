@@ -184,7 +184,7 @@ api:
     admins:
       ## @param api.oidc.admins.claims Subjects having any of these claims will automatically be Kargo admins.
       claims:
-        aliuid:
+        groups:
           - "1710483712704206"
         # sub:
         # - alice
@@ -272,7 +272,7 @@ api:
           # 用 sub 或 email 作为用户名标识
           getUserInfo: true
           claimMapping:
-            groups: aliuid
+            groups: uid
           
       # - id: mock
       #   name: Example
