@@ -267,6 +267,7 @@ api:
           # 阿里云 RAM 支持的 scopes
           scopes:
             - openid
+            - aliuid
             - profile
           # 用 sub 或 email 作为用户名标识
           getUserInfo: true
