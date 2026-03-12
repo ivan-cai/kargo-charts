@@ -179,7 +179,7 @@ api:
       - aliuid
 
     ## @param api.oidc.usernameClaim The claim to use as the username for the user.
-    usernameClaim: sub
+    usernameClaim: aliuid
 
     admins:
       ## @param api.oidc.admins.claims Subjects having any of these claims will automatically be Kargo admins.
