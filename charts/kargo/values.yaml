@@ -184,8 +184,8 @@ api:
     admins:
       ## @param api.oidc.admins.claims Subjects having any of these claims will automatically be Kargo admins.
       claims:
-        iss:
-          - "https://oauth.aliyun.com" 
+        aliuid:
+          - "1710483712704206"
         # sub:
         # - alice
         # - bob
@@ -270,6 +270,7 @@ api:
             - profile
           # 用 sub 或 email 作为用户名标识
           getUserInfo: true
+          
       # - id: mock
       #   name: Example
       #   type: mockCallback
